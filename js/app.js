@@ -13,15 +13,40 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
+    div.innerHTML = `<div class="single-product mt-5 mx-4 box-shadow" >
       <div>
-    <img class="product-image" src=${image}></img>
-      </div>
-      <h3>${product.title}</h3>
+    <img class="product-image" src=${image} class="rounded" alt="" width="160px">
+      </div class="product-1 align-items-center p-2 text-center">
+      <div class="mt-3 info">
+      <h4>${product.title}</h4>
       <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      </div>
+    
+      <div class="cost mt-3 text-dark">
+      <span>${product.price}$</span>
+ 
+      <div class="star mt-3 align-items-center">
+      
+      <span > ${product.rating.rate} </span>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <span class="mx-4"> ${product.rating.count} ratings</span>
+         
+      </div>
+  </div>
+
+      
+      <div class="bag p-3 text-center text-white mt-3 text-white cursor">
+      <span class="text-uppercase " >      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn bag text-uppercase ">Add to cart</button> </span>
+  </div>
+      
+  <div class="watch p-3 text-center mt-3 mb-3  text-white">
+  <span class="text-uppercase ">
+  <button id="details-btn" class="btn text-uppercase  watch">Details</button></div>
+  </span>
+</div>
+     
       `;
     document.getElementById("all-products").appendChild(div);
   }

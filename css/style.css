@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  /* background-color: black !important; */
 }
 .search-field {
   border: none;
@@ -35,14 +36,67 @@ body {
   align-items: center;
   justify-content: center;
 }
+.card {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
 .single-product {
-  padding: 10px;
-  transition: 0.6s;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.3s;
+}
+.info {
+  line-height: 17px;
+}
+.cost > span {
+  color: #286783;
+  font-weight: bold;
+  font-size: 20px;
+}
+.bag {
+  background-color: #097770;
+}
+.text-white {
+  color: #fff;
+}
+.mt-5 {
+  margin-top: 25px;
+}
+.mt-3 {
+  margin-top: 15px;
+}
+.mx-4 {
+  margin-left: 20px;
+}
+.mb-4 {
+  margin-bottom: 20px;
+}
+.fa-star {
+  color: #fbc02d;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.box-shadow {
+  box-shadow: 2px -1px 24px -14px rgba(0, 57, 27, 0.87);
+  -webkit-box-shadow: 2px -1px 24px -14px rgba(0, 57, 27, 0.87);
+  -moz-box-shadow: 2px -1px 24px -14px rgba(0, 57, 27, 0.87);
+}
+.watch {
+  background-color: #a9c0a6;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
-  border-radius: 10px;
-  border: 1px solid cyan;
+  transform: translateY(-15px);
+  transition: transform 0.3s;
+  /* color: coral; */
+  border: 1px solid green;
 }
 .product-image {
   width: 150px;
