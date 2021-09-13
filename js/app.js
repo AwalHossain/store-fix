@@ -18,17 +18,17 @@ const showProducts = (products) => {
     //Rating are being shown here by using condition
     let star;
     if((`${product.rating.rate}`)> 1.5 && (`${product.rating.rate}`)<=2.5 ){
-      star = `<i class="fa fa-star"></i> <i class="fa fa-star"></i>  `
+      star = `<i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i>  <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i>`
       }
   else if((`${product.rating.rate}`)> 2.5 && (`${product.rating.rate}`)< 3.5 ){
-    star = `<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>`
+    star = `<i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="far fa-star"></i> <i class="far fa-star"></i>`
     }
     else if(`${product.rating.rate}` >=3.5 && (`${product.rating.rate}`)< 4.5){
-      star = `<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>`
+      star = `<i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fas fa-star-half-alt st-color "></i> <i class="far fa-star"></i> `
     }
     else if  ((`${product.rating.rate}`)>= 4.5){
       console.log('greater than 2');
-      star= `<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>`;
+      star= ` <i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fas fa-star-half-alt st-color "></i> <i class="far fa-star"></i>`;
     }
     else{
       star = `<i class="fa fa-star"></i> `
@@ -44,12 +44,12 @@ const showProducts = (products) => {
             <p class='text1'>Category: ${product.category}</p>
           </div>
           <div class="cost mt-3 text-dark">
-           <span>${product.price}$</span>
+           <span>$${product.price}</span>
            </div>
           <div class="star mt-3 align-items-center">
             <span> ${star} </span>
             <span > ${product.rating.rate} </span>
-            <span class="mx-4"> ${product.rating.count} ratings</span>         
+            <span class="mx-4"> ${product.rating.count} Reviews</span>         
           </div>
            <div onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="add p-3 text-center text-white mt-3 text-white pointer buy-now text-uppercase">
             <span class="text-uppercase p-3 " >Add to cart</span>
@@ -118,10 +118,8 @@ setInnerText("total-tax", priceConverted * 0.2);
 //grandTotal update function
 const updateTotal = () => {
   updateTaxAndCharge();
-  console.log( getInputValue("price"), getInputValue("delivery-charge"),getInputValue("total-tax"));
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") + getInputValue("total-tax") ;
-    console.log();
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
 
@@ -137,8 +135,6 @@ const singleProduct=(id) =>{
 //showing the single product with help of  modal 
 const showSingleProduct = (data)=>{
   console.log(data);
-  console.log(true);
-  console.log(data.image);
   const details = document.getElementById('content');
   details.innerHTML =`
   <div class="modal-header">
@@ -147,7 +143,7 @@ const showSingleProduct = (data)=>{
 </div>
 <div class="modal-body">
 <div class="card" style="width: 28rem; ">
-  <img src="${data.image}" class="card-img-top" height="450px" alt="...">
+  <img src="${data.image}" class="card-img-top"  alt="images">
   <div class="card-body">
     <h5 class="card-title">${data.title}</h5>
     <h4>$ ${data.price} </h4>
@@ -169,5 +165,7 @@ const showSingleProduct = (data)=>{
   
 }
 
-showSingleProduct();
+setTimeout(showSingleProduct, 3000)
+
+// showSingleProduct();
 
