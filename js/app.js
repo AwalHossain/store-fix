@@ -19,7 +19,7 @@ const showProducts = (products) => {
       </div class="product-1 align-items-center p-2 text-center">
       <div class="mt-3 info">
       <h4>${product.title}</h4>
-      <p>Category: ${product.category}</p>
+      <p class='text1'>Category: ${product.category}</p>
       </div>
     
       <div class="cost mt-3 text-dark">
@@ -37,13 +37,13 @@ const showProducts = (products) => {
   </div>
 
       
-      <div class="bag p-3 text-center text-white mt-3 text-white cursor">
-      <span class="text-uppercase " >      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn bag text-uppercase ">Add to cart</button> </span>
+      <div onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="add p-3 text-center text-white mt-3 text-white pointer buy-now text-uppercase">
+      <span class="text-uppercase p-3 " >    Add to cart</span>
   </div>
       
-  <div class="watch p-3 text-center mt-3 mb-3  text-white">
+  <div id="details-btn" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="details p-3 text-center mt-3  text-white pointer">
   <span class="text-uppercase ">
-  <button id="details-btn" class="btn text-uppercase  watch">Details</button></div>
+    Details
   </span>
 </div>
      

@@ -3,29 +3,8 @@ body {
   font-family: "Montserrat", sans-serif;
   /* background-color: black !important; */
 }
-.search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
-}
-.search-field:hover {
-  outline: none;
-  border: none;
-}
-.search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
-  border-right: none;
-}
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
-}
+
+/*===================== Basic E-commerce Card Design ============= */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -43,7 +22,10 @@ body {
   border-radius: 20px;
   transition: transform 0.3s;
 }
-
+.text1 {
+  font-size: 13px;
+  color: #cbcdcb;
+}
 .single-product {
   border: none;
   outline: none;
@@ -55,29 +37,35 @@ body {
 .info {
   line-height: 17px;
 }
+.pointer {
+  cursor: pointer;
+}
+
 .cost > span {
   color: #286783;
   font-weight: bold;
   font-size: 20px;
 }
-.bag {
+.add {
   background-color: #097770;
 }
-.text-white {
-  color: #fff;
+.details {
+  background-color: #a9c0a6;
 }
-.mt-5 {
-  margin-top: 25px;
+
+/*=================== Hover Part====================== */
+.details:hover {
+  background-color: tomato;
 }
-.mt-3 {
-  margin-top: 15px;
+.add:hover {
+  background-color: tomato;
 }
-.mx-4 {
-  margin-left: 20px;
+.single-product:hover {
+  transform: translateY(-15px);
+  transition: transform 0.3s;
+  border: 1px solid green;
 }
-.mb-4 {
-  margin-bottom: 20px;
-}
+/* Rating Star color */
 .fa-star {
   color: #fbc02d;
 }
@@ -89,22 +77,14 @@ body {
   -webkit-box-shadow: 2px -1px 24px -14px rgba(0, 57, 27, 0.87);
   -moz-box-shadow: 2px -1px 24px -14px rgba(0, 57, 27, 0.87);
 }
-.watch {
-  background-color: #a9c0a6;
-}
-.single-product:hover {
-  transform: translateY(-15px);
-  transition: transform 0.3s;
-  /* color: coral; */
-  border: 1px solid green;
-}
+
 .product-image {
   width: 150px;
   height: 150px;
 }
+/*================= Cart Design ============================ */
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
@@ -114,6 +94,8 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+
+/*=============  Responsive Desingn for 768px or upper divise  =====================*/
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -132,6 +114,7 @@ body {
     padding-right: 10px;
   }
 }
+/*============== Responsive Design for Mobile  ===================*/
 @media only screen and (max-width: 468px) {
   #all-products {
     display: grid;
