@@ -89,28 +89,30 @@ const updatePrice = (id, value) => {
 };
 
 // set innerText function
-const setInnerText = (id, value) => {
+const setInnerTax = (id, value) => {
    document.getElementById(id).innerText =(value).toFixed(2);
 };
-
+const setInnerDelivery = (id, value) => {
+  document.getElementById(id).innerText =(value);
+}
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
   const priceConverted = getInputValue("price");
   if (priceConverted > 200) {
-    setInnerText("delivery-charge", 30);
+    setInnerDelivery("delivery-charge", 30);
    
-setInnerText("total-tax", priceConverted * 0.2);
+    setInnerTax("total-tax", priceConverted * 0.2);
 
   
   }
   if (priceConverted > 400) {
-    setInnerText("delivery-charge", 50);
-     setInnerText("total-tax", priceConverted * 0.3);
+    setInnerDelivery("delivery-charge", 50);
+    setInnerTax("total-tax", priceConverted * 0.3);
 
   }
   if (priceConverted > 500) {
-    setInnerText("delivery-charge", 60);
-    setInnerText("total-tax", priceConverted * 0.4);
+    setInnerDelivery("delivery-charge", 60);
+    setInnerTax("total-tax", priceConverted * 0.4);
   }
 };
 
