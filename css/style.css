@@ -65,7 +65,7 @@ body {
 .single-product {
   border: none;
   outline: none;
-  background-color: #fff;
+  background-color: #f0fff0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   transition: transform 0.3s;
@@ -120,6 +120,7 @@ body {
 }
 /*================= Cart Design ============================ */
 .cart {
+  background-color: #fff;
   width: 350px;
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
