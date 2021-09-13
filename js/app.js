@@ -163,7 +163,4 @@ const showSingleProduct = (data)=>{
   
 }
 
-// setTimeout(showSingleProduct, 3000)
-
-// showSingleProduct();
 
