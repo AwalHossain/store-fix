@@ -23,13 +23,16 @@
 
   <main class="main">
     <!--========================== Search Bar =======================-->
-    <div class="search-field ">
-      <div class="search-box  text-center">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
+    <div class="search-field  container mt-5">
+      <div class="search-box ">
+        <div class="wrap">
+          <div class="search">
+             <input type="text" class="searchTerm" placeholder="What are you looking for?">
+             <button type="submit" class="searchButton">
+               <i class="fa fa-search"></i>
+            </button>
+          </div>
+       </div>
       </div>
     </div>
 
