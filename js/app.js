@@ -27,7 +27,6 @@ const showProducts = (products) => {
       star = `<i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fas fa-star-half-alt st-color "></i> <i class="far fa-star"></i> `
     }
     else if  ((`${product.rating.rate}`)>= 4.5){
-      console.log('greater than 2');
       star= ` <i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fa fa-star st-color"></i> <i class="fas fa-star-half-alt st-color "></i> <i class="far fa-star"></i>`;
     }
     else{
@@ -152,7 +151,6 @@ const showSingleProduct = (data)=>{
   <div class="card-body">
   </div>
 </div>
-------
   </div>
 </div>
 <div class="modal-footer">
@@ -165,7 +163,7 @@ const showSingleProduct = (data)=>{
   
 }
 
-setTimeout(showSingleProduct, 3000)
+// setTimeout(showSingleProduct, 3000)
 
 // showSingleProduct();
 
